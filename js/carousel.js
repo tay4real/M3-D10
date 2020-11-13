@@ -28,3 +28,29 @@ const carousel = [
       "https://m.media-amazon.com/images/G/01/digital/video/sonata/superhero_gl2_svod_aeronauts/9e0f2dcb-2be9-48e9-a397-5ae834f454a2._UR3000,600_SX1500_FMwebp_.jpg",
   },
 ];
+
+const indicators = (id) => {
+  return `<li
+    data-target="#carouselExampleIndicators"
+    data-slide-to=${id}
+    class=
+  ></li>`;
+};
+
+const slides = (imgURL, id) => {
+  return `<div class="carousel-item ${id === 0 ? "active" : ""}">
+ <img src=${imgURL} class="d-block w-100" alt="..." />
+</div>`;
+};
+
+let slide_indicators = "";
+let slideItems = "";
+carousel.map((slide, index) => {
+  console.log(slide, index);
+  let carouselIndicator = document.querySelector(".carousel-indicators");
+  let carouselInner = document.querySelector(".carousel-inner");
+  slide_indicators += indicators(index);
+  slideItems += slides(slide.imagePath, index);
+  carouselIndicator.innerHTML = slide_indicators;
+  carouselInner.innerHTML = slideItems;
+});
