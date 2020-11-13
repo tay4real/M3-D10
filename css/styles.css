@@ -6,27 +6,26 @@ body {
   background: #0f171e;
 }
 
-h3 {
-  font-size: 19px;
-  display: inline-block;
+.input-icons i {
+  position: absolute;
 }
 
-a {
-  color: #01a3db;
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-a:hover {
-  color: #14b5eb;
+.icon {
+  padding: 10px;
+  min-width: 40px;
+  font-size: larger;
+  color: white;
 }
 
-.prime-logo {
-  height: 19px;
-  position: relative;
-  top: 2px;
-}
-
-.strive-nav-bg {
-  background-color: #0f171e;
+.input-field {
+  width: 100%;
+  padding: 10px;
+  padding-left: 2rem;
 }
 
 .navbar {
@@ -35,10 +34,7 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 3;
-}
-
-.carousel {
-  margin-top: 77px;
+  min-height: 10vh;
 }
 
 nav .dropdown-toggle {
@@ -47,226 +43,4 @@ nav .dropdown-toggle {
 nav .dropdown-toggle:hover,
 nav .dropdown-toggle:focus {
   color: white;
-}
-
-/* user account btn */
-.btn-ghost.dropdown-toggle span {
-  display: inline-block;
-  width: 80px;
-  position: relative;
-  top: 0.5rem;
-  text-overflow: ellipsis; /*truncates the text over 80px overflow with three ...*/
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.nav-link {
-  font-weight: 600;
-}
-
-.navbar-expand-lg .nav-item .nav-link {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0.05rem;
-  margin: 8px;
-}
-
-.navbar-expand-lg .nav-item.active .nav-link {
-  border-bottom: 1px solid white;
-}
-
-.infos-container {
-  position: absolute;
-  right: 0;
-  left: 0;
-  color: white;
-  transform: translateY(-3.3rem);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 10;
-}
-
-.infos-content {
-  padding: 1rem 1.5rem;
-  padding-top: 38px;
-  background: linear-gradient(rgba(27, 37, 48, 0), #1b2530 48px);
-  overflow: hidden;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
-.infos-content .plus {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  opacity: 0;
-  transform: translateX(6px);
-  transition: all 0.3s ease 0.35s;
-}
-
-.infos-content .plus::before {
-  content: " ";
-  position: absolute;
-  background-color: #fff;
-  width: 2px;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 9;
-}
-
-.infos-content .plus::after {
-  content: " ";
-  position: absolute;
-  background-color: #fff;
-  height: 2px;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 9;
-}
-
-.play-btn {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  background-color: #4caf7d;
-  border-radius: 50%;
-  margin-right: 0.25rem;
-  transform: translateX(-200px);
-  opacity: 0;
-  transition: all 0.3s cubic-bezier(0.35, 0.27, 0.22, 1) 0.4s;
-}
-
-.play-btn:hover {
-  animation: gradientSlide 4s ease infinite;
-}
-
-.play-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  margin: auto;
-  border-style: solid;
-  border-width: 7px 0 7px 10px;
-  border-color: transparent transparent transparent #fff;
-}
-
-.gradient {
-  background: linear-gradient(
-    270deg,
-    rgb(76, 175, 125) 0%,
-    rgb(165, 230, 13) 100%
-  );
-  background-size: 400% 400%;
-}
-
-@keyframes gradientSlide {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.infos-content p {
-  font-size: 0.8rem;
-  margin-bottom: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.infos-content .movie-footer {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #8197a4;
-}
-
-.strive-card:hover .infos-container {
-  opacity: 1;
-  transform: translateY(-3rem);
-  pointer-events: initial;
-}
-
-.strive-card:hover .plus {
-  opacity: 1;
-  transform: translateX(0px);
-}
-
-.strive-card:hover .play-btn {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-footer {
-  text-align: center;
-}
-
-footer .footer-logo {
-  display: inline-block;
-  width: 120px;
-  height: 48px;
-  background-image: url("../logo/strivevideo.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-footer ul {
-  list-style: none;
-}
-footer ul li {
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-footer ul:last-of-type {
-  color: rgba(255, 255, 255, 0.45);
-}
-
-#toaster {
-  position: fixed;
-  right: 20px;
-  top: 97px;
-  padding: 1rem 2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
-  opacity: 0;
-  animation: gradientSlide 4s ease infinite;
-  transition: opacity 0.3s ease-in;
-  z-index: 999;
-}
-
-#toaster.show {
-  opacity: 1;
-}
-
-#toaster::before {
-  content: "";
-  position: absolute;
-  right: -20px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 20px;
-  height: 20px;
-  border: 10px solid;
-  border-color: transparent transparent transparent #28a745;
 }
