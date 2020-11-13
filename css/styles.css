@@ -44,3 +44,8 @@ nav .dropdown-toggle:hover,
 nav .dropdown-toggle:focus {
   color: white;
 }
+
+/* Carousel */
+.carousel {
+  margin-top: 77px;
+}
